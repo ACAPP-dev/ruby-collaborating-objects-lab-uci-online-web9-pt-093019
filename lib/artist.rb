@@ -27,7 +27,7 @@ class Artist
       artist_instance.name == name
     end == nil
 
-
+binding.pry
 
 
 
