@@ -24,8 +24,12 @@ class Artist
 
   def self.find_or_create_by_name(name)
     self.all.find do |artist_instance|
-
+      artist_instance.name == name
     end
+
+    binding.pry
+
+
 
     #artist_return = []
     #artist_return = self.all.select do |artist_object|
