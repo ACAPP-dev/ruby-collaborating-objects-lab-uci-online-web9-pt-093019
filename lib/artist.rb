@@ -14,8 +14,6 @@ class Artist
     @@all
   end
 
-
-
   def add_song(song)
     song.artist = self
   end
@@ -25,11 +23,15 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    artist_return = []
-    artist_return = self.all.select do |artist_object|
-      artist_object.name == name
+    self.all.find do |artist_instance|
+
     end
-    artist_return.empty? ? artist = Artist.new(name) : artist_return[0]
+
+    #artist_return = []
+    #artist_return = self.all.select do |artist_object|
+    #  artist_object.name == name
+    #end
+    #artist_return.empty? ? artist = Artist.new(name) : artist_return[0]
   end
 
   def print_songs
