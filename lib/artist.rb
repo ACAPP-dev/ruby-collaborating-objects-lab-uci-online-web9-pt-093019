@@ -24,9 +24,10 @@ class Artist
 
   def self.find_or_create_by_name(name)
 
-      artist_check = self.all.find do |artist_instance|
-      artist_instance.name == name
-    end
+    artist_check = self.all.find{|artist_instance| artist_instance.name == name}
+    #  artist_check = self.all.find do |artist_instance|
+    #  artist_instance.name == name
+    #end
 #binding.pry
     artist_check ? artist_check : Artist.new(name)
 
