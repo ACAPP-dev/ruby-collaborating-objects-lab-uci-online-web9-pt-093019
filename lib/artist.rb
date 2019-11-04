@@ -22,10 +22,12 @@ class Artist
     Song.all.select {|song| song.artist == self}
   end
 
-  Artist.new(name) if def self.find_or_create_by_name(name)
+  artist_check = def self.find_or_create_by_name(name)
     self.all.find do |artist_instance|
       artist_instance.name == name
-    end == nil
+    end
+
+    artist_check ? artist_check : Artist.new(name)
 
 
 
