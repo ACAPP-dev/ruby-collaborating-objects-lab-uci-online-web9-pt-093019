@@ -28,7 +28,7 @@ class Artist
     end
 
     artist_check ? artist_check : Artist.new(name)
-
+    binding.pry
 
 
 
