@@ -26,9 +26,9 @@ class Artist
     self.all.find do |artist_instance|
       artist_instance.name == name
     end
-
+binding.pry
     artist_check ? artist_check : Artist.new(name)
-    binding.pry
+
 
 
 
